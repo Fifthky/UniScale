@@ -1,0 +1,157 @@
+{
+  "experiment_name": "context-scaling",
+  "result_sha256": {
+    "Granite-FlowState-r1.1/all_results.csv": "6c37b23fba3d1464d98100319c3da01c736335b8c903b2e2f402e8dc753115a2",
+    "Granite-PatchTST-FM-r1/all_results.csv": "23038ed20128b88a7e8be9980a0d3ddff6e471b233760e799c80477168df587a",
+    "Moirai2/all_results.csv": "72005b87fe654171c59ebad06fc668d141292d0848c8e54277714cc5627d6391",
+    "Moirai_base/all_results.csv": "5883552ed58eb5ecb5e934cfc5c3cd36c28a5fa7344260a365384cbfd2692e7d",
+    "Moirai_large/all_results.csv": "e7228adb2de4ff8b40b156bdd163c82efcacb293df6126653ce14248f1a12d15",
+    "TiRex-2-Zeroshot/all_results.csv": "e46885735ddc5c74de7c92abbf025fbc178ce8788ad2b6e836d7bbec6e29b9f9",
+    "TiRex/all_results.csv": "43e76352c639b0e89923f4864b3f2d7f76d2d819469ec29a5d3402e75739ec2a",
+    "TimesFM-2.5/all_results.csv": "f83d70a1ba374702de93ef764c29371db12e6408de554aba4b2851c953501d4f",
+    "Toto-2.0-1B/all_results.csv": "53344f63ec21c9b4d039735380e71b31f30babd9abf11a8baa822f95ab4f0f42",
+    "Toto-2.0-2.5B/all_results.csv": "5a3b610c24db3e93a3201be6b6740fbb38aeda9b023647c55e1ea8c210eed490",
+    "Toto-2.0-22m/all_results.csv": "6d02e1fa3f76e117d2e49a47735e54e15fbcac3146dcca804541d8ec381e5049",
+    "Toto-2.0-313m/all_results.csv": "f18dd9564d2f7ac323eef47438c984ab204e9601d2baa15b6d890ebc3eb54864",
+    "Toto-2.0-4m/all_results.csv": "f402d3d75af0fdaf35f849d34075654ced42f93c113a468641021678749b65ee",
+    "chronos-2-small/all_results.csv": "16b13b0d77d042ae05e4bf9e4b0fec36b508c98afe9b8aac9a27f077ba53dfe7",
+    "chronos-2/all_results.csv": "9334ec1164c19e13b3770719c730e236231643f5cf2c0aa58a5ac904825a508c",
+    "chronos_bolt_base/all_results.csv": "83bcb0c3150512fabc64ca363783fa5b2a7f4a286dcb440078b478ebb9e93ecb",
+    "chronos_bolt_small/all_results.csv": "b6c23a26cc6d5c3fe98fcaaf18d493d4afe0ce3da14bf929dd8826d463fca9e0",
+    "moirai_small/all_results.csv": "d29816ba49419a1c7c04cb2674167ea6c60b81e915a2bd47b8bfab3bd87df140",
+    "sundial_base_128m/all_results.csv": "9b829e7d345a4c7f350efafa936357e1f11df2c21ff0d783e24c71ea78e867e6",
+    "timesfm/all_results.csv": "4bf801df0ae94cc375a89525b6f2a720f2f5aa172f23758bb9ba99fe8cafca66",
+    "timesfm_2_0_500m/all_results.csv": "7128731b85b4652c2eae0c7189193ae4556f3b0d160336eb16f69d7ed2376b34"
+  },
+  "run_timestamp": "release",
+  "shard_tasks": [],
+  "status": "completed",
+  "tasks": [
+    {
+      "cells": 138,
+      "model_id": "Toto-2.0-2.5B",
+      "result_path": "UniScale/results/context-scaling/release/Toto-2.0-2.5B/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 138,
+      "model_id": "Toto-2.0-22m",
+      "result_path": "UniScale/results/context-scaling/release/Toto-2.0-22m/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 138,
+      "model_id": "Toto-2.0-4m",
+      "result_path": "UniScale/results/context-scaling/release/Toto-2.0-4m/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "chronos-2",
+      "result_path": "UniScale/results/context-scaling/release/chronos-2/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "chronos-2-small",
+      "result_path": "UniScale/results/context-scaling/release/chronos-2-small/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 138,
+      "model_id": "Granite-FlowState-r1.1",
+      "result_path": "UniScale/results/context-scaling/release/Granite-FlowState-r1.1/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 115,
+      "model_id": "TiRex",
+      "result_path": "UniScale/results/context-scaling/release/TiRex/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "Moirai_base",
+      "result_path": "UniScale/results/context-scaling/release/Moirai_base/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 115,
+      "model_id": "timesfm_2_0_500m",
+      "result_path": "UniScale/results/context-scaling/release/timesfm_2_0_500m/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 115,
+      "model_id": "chronos_bolt_small",
+      "result_path": "UniScale/results/context-scaling/release/chronos_bolt_small/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "moirai_small",
+      "result_path": "UniScale/results/context-scaling/release/moirai_small/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 138,
+      "model_id": "Toto-2.0-1B",
+      "result_path": "UniScale/results/context-scaling/release/Toto-2.0-1B/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 138,
+      "model_id": "Toto-2.0-313m",
+      "result_path": "UniScale/results/context-scaling/release/Toto-2.0-313m/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "TiRex-2-Zeroshot",
+      "result_path": "UniScale/results/context-scaling/release/TiRex-2-Zeroshot/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "TimesFM-2.5",
+      "result_path": "UniScale/results/context-scaling/release/TimesFM-2.5/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "Moirai2",
+      "result_path": "UniScale/results/context-scaling/release/Moirai2/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 115,
+      "model_id": "sundial_base_128m",
+      "result_path": "UniScale/results/context-scaling/release/sundial_base_128m/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "Moirai_large",
+      "result_path": "UniScale/results/context-scaling/release/Moirai_large/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 115,
+      "model_id": "chronos_bolt_base",
+      "result_path": "UniScale/results/context-scaling/release/chronos_bolt_base/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 69,
+      "model_id": "timesfm",
+      "result_path": "UniScale/results/context-scaling/release/timesfm/all_results.csv",
+      "status": "completed"
+    },
+    {
+      "cells": 184,
+      "model_id": "Granite-PatchTST-FM-r1",
+      "result_path": "UniScale/results/context-scaling/release/Granite-PatchTST-FM-r1/all_results.csv",
+      "status": "completed"
+    }
+  ]
+}

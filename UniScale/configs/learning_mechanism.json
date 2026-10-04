@@ -1,0 +1,84 @@
+{
+  "protocol": "history-learning-v5",
+  "processes": ["ar1", "lag8", "threshold"],
+  "magnitudes": [0.15, 0.225, 0.3],
+  "phi_magnitude": 0.3,
+  "query_length": 96,
+  "context_lengths": [96, 128, 256, 512, 1024, 2048],
+  "scored_horizons": [1, 2, 3],
+  "primary_horizon": 1,
+  "query_log_likelihood_bound": 1.0986122886681098,
+  "maximum_query_candidates": 2000000,
+  "development_queries": 128,
+  "test_queries": 1024,
+  "prefix_repeats": 4,
+  "data_seed": 712602,
+  "training_seeds": [2026, 2027, 2028],
+  "training_history_lengths": [1024, 4096, 8192],
+  "training_updates": 2000,
+  "training_batch_size": 256,
+  "training_learning_rate": 0.001,
+  "state_transfer": {
+    "method": "shared-history-bn-calibrated-parameters",
+    "evaluation_seed": 1112602,
+    "calibration_seed": 1112602,
+    "calibration_windows_per_rule": 512,
+    "calibration_batch_size": 32,
+    "training_fraction": 0.8,
+    "validation_interval": 100,
+    "validation_min_delta": 0.0001,
+    "patchtst_weight_decay": 0.01,
+    "patchtst_schedule": "cosine"
+  },
+  "architectures": ["DLinear", "PatchTST"],
+  "patchtst": {
+    "width": 32, "heads": 4, "encoder_layers": 1,
+    "feedforward_width": 64, "dropout": 0.1,
+    "activation": "gelu", "patch_length": 16, "stride": 8,
+    "internal_normalization": false
+  },
+  "inference_batch_size": 128,
+  "torch_threads": 2,
+  "models": [
+    {"name": "timesfm25", "checkpoint_subdir": "timesfm-2.5-200m-pytorch", "environment": "TSFM"},
+    {"name": "chronos2", "checkpoint_subdir": "chronos-2", "environment": "TSFM"}
+  ],
+  "activation_transfer": {
+    "query_seed": 2026091701,
+    "donor_seed": 2026091702,
+    "donor_repeats": 2,
+    "candidate": {
+      "method": "residual_short", "layer": 5, "length": 512,
+      "donor_count": 4, "strength": 1
+    }
+  },
+  "activation_design": {
+    "strengths": [0.5, 1.0, 1.5],
+    "timesfm_layers": [3, 5, 7],
+    "chronos_depth_fractions": [0.25, 0.5, 0.75],
+    "selection": "Equal mean conditional-mean normalized MASE across processes, magnitudes, repetitions, signs and transfer/recovery; development only"
+  },
+  "controls": {
+    "crossed": {
+      "dataset_panel": "UniScale/configs/controlled_dataset_panel.json",
+      "training_config": "UniScale/configs/matched_history_full_shot.json",
+      "history_lengths": [4096, 8192],
+      "input_lengths": [96, 512],
+      "horizon": 96,
+      "origin_horizon": 720,
+      "seeds": [2026, 2027, 2028],
+      "models": ["DLinear", "PatchTST", "PatchTST-compact", "TimesFM"],
+      "updates": 400,
+      "report_updates": [0, 100, 400],
+      "validation_interval": 50,
+      "batch_size": 32,
+      "microbatch_size": 8,
+      "learning_rates": {
+        "DLinear": 0.0001, "PatchTST": 0.0001,
+        "PatchTST-compact": 0.0001, "TimesFM": 0.00001
+      },
+      "weight_decay": 0.01,
+      "save_checkpoints": false
+    }
+  }
+}

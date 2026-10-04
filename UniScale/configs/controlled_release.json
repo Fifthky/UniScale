@@ -1,0 +1,6 @@
+{
+  "run_timestamp": "release",
+  "selection_policy": "grid_preferred_v1",
+  "acquisition_dataset_panel": "controlled_dataset_panel.json",
+  "primary_dataset_panel": "controlled_dataset_panel.json"
+}

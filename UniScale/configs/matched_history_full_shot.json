@@ -1,0 +1,79 @@
+{
+  "experiment_name": "matched-history-full-shot",
+  "models": [
+    {
+      "name": "DLinear",
+      "batch_size": 32,
+      "evaluation_batch_size": 1024,
+      "hyperparameters": {
+        "moving_average": 25
+      }
+    },
+    {
+      "name": "PatchTST",
+      "batch_size": 32,
+      "evaluation_batch_size": 512,
+      "hyperparameters": {
+        "width": 128,
+        "heads": 4,
+        "encoder_layers": 2,
+        "feedforward_width": 256,
+        "dropout": 0.1,
+        "activation": "gelu",
+        "patch_length": 16,
+        "stride": 8
+      },
+      "dataset_training_overrides": {
+        "solar/10T": {
+          "normalization_policy": "series_window_std_v1",
+          "training_loss": "mae"
+        }
+      }
+    }
+  ],
+  "datasets_file": "controlled_dataset_panel.json",
+  "dataset_terms": [
+    "short"
+  ],
+  "H": [
+    96,
+    192,
+    336
+  ],
+  "L": [
+    1024,
+    2048,
+    4096,
+    8192
+  ],
+  "local_input_length": 96,
+  "origin_horizon": 720,
+  "dataset_training_overrides": {
+    "bitbrains_fast_storage/5T": {
+      "normalization_policy": "series_window_std_v1",
+      "training_loss": "mae"
+    },
+    "bitbrains_rnd/5T": {
+      "normalization_policy": "series_window_std_v1",
+      "training_loss": "mae"
+    }
+  },
+  "training": {
+    "learning_rate": 0.0001,
+    "minimum_epochs": 5,
+    "maximum_epochs": 30,
+    "patience_epochs": 5,
+    "validation_origins_per_series": 4,
+    "temporal_coverage_stride": 64,
+    "learning_rate_decay_epochs": 10,
+    "learning_rate_decay": 0.5,
+    "gradient_clip_norm": 1,
+    "minimum_training_windows": 16,
+    "seed": 2026,
+    "selection_improvement_tolerance": 0.000001
+  },
+  "execution": {
+    "device": "cuda",
+    "dataset_properties": "UniScale/information/dataset_properties.json"
+  }
+}

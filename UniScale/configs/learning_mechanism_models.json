@@ -1,0 +1,10 @@
+{
+  "timesfm25": {
+    "checkpoint_subdir": "timesfm-2.5-200m-pytorch",
+    "files": {"model.safetensors": "2f776efe6245e42b24bc4153ffdf61810140210e4bd3b01fb21f7aa779ab6ce8"}
+  },
+  "chronos2": {
+    "checkpoint_subdir": "chronos-2",
+    "files": {"model.safetensors": "ddcda3c7508bf2528087723e98a20707cc04b7f370ae275a9fd88078ddba4f42"}
+  }
+}

@@ -1,0 +1,39 @@
+# Local environments, credentials, Python artifacts, and editor files.
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/
+build/
+dist/
+data/
+outputs/
+
+# Only registered releases are published. New runs require explicit registration.
+UniScale/results/*
+!UniScale/results/joint-scaling/
+UniScale/results/joint-scaling/*
+!UniScale/results/joint-scaling/release/
+!UniScale/results/context-scaling/
+UniScale/results/context-scaling/*
+!UniScale/results/context-scaling/release/
+!UniScale/results/baselines/
+
+# Resumable canonical tables are published; transient workers and caches are not.
+UniScale/results/**/shards/
+UniScale/results/**/launcher_logs/
+UniScale/results/**/launchers/
+UniScale/results/**/target-cache/
+UniScale/results/**/logs/
+UniScale/results/**/*.log
+UniScale/results/**/*.lock
+UniScale/results/**/*.tmp
+UniScale/results/**/skipped_cells.csv

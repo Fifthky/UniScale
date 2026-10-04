@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/ibm-granite/granite-tsfm",
+  "revision": "640f7c80a21a4e2253b6d6140d067452bb93e7d4",
+  "license": "Apache-2.0",
+  "scope": "PyTorch inference implementation.",
+  "changes": "Repository-local configuration import and exports; trailing whitespace removed from one empty configuration line."
+}

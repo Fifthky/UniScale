@@ -1,0 +1,23 @@
+[
+  {"id":"Toto-2.0-2.5B","sequence":1,"environment":"toto"},
+  {"id":"Toto-2.0-22m","sequence":1,"environment":"toto"},
+  {"id":"Toto-2.0-4m","sequence":1,"environment":"toto"},
+  {"id":"chronos-2","sequence":1,"environment":"TSFM"},
+  {"id":"chronos-2-small","sequence":1,"environment":"TSFM"},
+  {"id":"Granite-FlowState-r1.1","sequence":1,"environment":"granite"},
+  {"id":"TiRex","sequence":1,"environment":"TSFM"},
+  {"id":"Moirai_base","sequence":1,"environment":"TSFM"},
+  {"id":"timesfm_2_0_500m","sequence":1,"environment":"TSFM"},
+  {"id":"chronos_bolt_small","sequence":1,"environment":"TSFM"},
+  {"id":"moirai_small","sequence":1,"environment":"TSFM"},
+  {"id":"Toto-2.0-1B","sequence":2,"environment":"toto"},
+  {"id":"Toto-2.0-313m","sequence":2,"environment":"toto"},
+  {"id":"TiRex-2-Zeroshot","sequence":2,"environment":"tirex2"},
+  {"id":"TimesFM-2.5","sequence":2,"environment":"TSFM"},
+  {"id":"Moirai2","sequence":2,"environment":"TSFM"},
+  {"id":"sundial_base_128m","sequence":2,"environment":"TSFM"},
+  {"id":"Moirai_large","sequence":2,"environment":"TSFM"},
+  {"id":"chronos_bolt_base","sequence":2,"environment":"TSFM"},
+  {"id":"timesfm","sequence":2,"environment":"TSFM"},
+  {"id":"Granite-PatchTST-FM-r1","sequence":2,"environment":"granite"}
+]

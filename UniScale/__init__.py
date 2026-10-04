@@ -1,0 +1,2 @@
+"""UniScale project plugin namespace."""
+

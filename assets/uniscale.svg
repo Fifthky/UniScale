@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title">
+<title id="title">UniScale — Phase</title>
+<defs>
+<linearGradient id="p" x1="46" y1="30" x2="214" y2="226" gradientUnits="userSpaceOnUse"><stop stop-color="#49456F"/><stop offset=".55" stop-color="#8076AD"/><stop offset="1" stop-color="#BE98B6"/></linearGradient>
+</defs>
+<path d="M130 25 A103 103 0 0 1 231 124 L214 124 A86 86 0 0 0 130 42Z" fill="url(#p)"/>
+<path d="M231 135 A103 103 0 0 1 132 231 L132 214 A86 86 0 0 0 214 135Z" fill="url(#p)"/>
+<path d="M121 231 A103 103 0 0 1 25 134 L42 134 A86 86 0 0 0 121 214Z" fill="url(#p)"/>
+<path d="M26 116 L39 118 M33 88 L45 93 M48 63 L59 72 M71 44 L78 55 M99 31 L102 44" stroke="#9E91B8" stroke-width="4"/>
+<path d="M128 52V128L174 100" stroke="#AD8FAF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70 78 C70 164 112 194 184 194" stroke="#C399B4" stroke-width="10" stroke-linecap="round"/>
+<path d="M70 78 C78 140 115 171 184 171" stroke="#8B7EAD" stroke-width="10" stroke-linecap="round"/>
+<path d="M70 78 C92 128 120 147 184 147" stroke="#57507F" stroke-width="10" stroke-linecap="round"/>
+</svg>

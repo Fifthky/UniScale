@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/ibm-granite/granite-tsfm",
+  "revision": "bd3650cc76515839730758e4a30bf0c29f13e282",
+  "license": "Apache-2.0",
+  "scope": "PyTorch inference implementation.",
+  "changes": "Repository-local exports; unchanged count_parameters helper inlined from tools.py."
+}

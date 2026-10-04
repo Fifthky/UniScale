@@ -1,0 +1,164 @@
+{
+  "H": [
+    48,
+    96,
+    192,
+    336,
+    720
+  ],
+  "L": [
+    128,
+    256,
+    512,
+    1024,
+    2048
+  ],
+  "datasets": [
+    {
+      "name": "bitbrains_fast_storage/5T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "bitbrains_rnd/5T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "bizitobs_l2c/5T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "bizitobs_l2c/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "electricity/15T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "electricity/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "ett1/15T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "ett1/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "ett2/15T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "ett2/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "hierarchical_sales/D",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "jena_weather/10T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "jena_weather/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "kdd_cup_2018_with_missing/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "LOOP_SEATTLE/5T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "LOOP_SEATTLE/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "M_DENSE/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "saugeenday/D",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "saugeenday/W",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "solar/10T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "solar/H",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "SZ_TAXI/15T",
+      "terms": [
+        "short"
+      ]
+    },
+    {
+      "name": "us_births/D",
+      "terms": [
+        "short"
+      ]
+    }
+  ],
+  "execution": {
+    "dataset_properties": "UniScale/information/dataset_properties.json",
+    "device": "cuda"
+  },
+  "experiment_name": "joint-scaling",
+  "model_id": "sundial_base_128m",
+  "origin_horizon": 720,
+  "run_timestamp": "release"
+}

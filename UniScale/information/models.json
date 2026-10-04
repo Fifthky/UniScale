@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "source": {
+    "execution_evidence": "GIFT-Eval notebooks at 4fd98a9f803a0266f062737281555ddcd220bf81 and original result configurations retained under results/",
+    "policy": "Each checkpoint is an independent statistical unit. Proxy values remain explicitly graded.",
+    "formal_panel": "configs/formal_models.json is authoritative for the 21-checkpoint controlled experiment panel."
+  },
+  "metrics": {
+    "mase_column": "eval_metrics/MASE[0.5]",
+    "crps_column": "eval_metrics/mean_weighted_sum_quantile_loss",
+    "baseline_result_directory": "seasonal_naive",
+    "normalization": "Every model MASE and CRPS value is divided by the matching seasonal-naive value before statistical analysis."
+  },
+  "models": [
+    {
+      "id": "TiRex-2-Pretrained", "result_directory": "TiRex-2-Pretrained",
+      "checkpoint": "NX-AI/TiRex-2-gifteval-pretrain", "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 82.5, "active": 38.4},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": 928, "mechanism": "masked_future_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": "tirex2"
+    },
+    {
+      "id": "TiRex-2-Zeroshot", "result_directory": "TiRex-2-Zeroshot",
+      "checkpoint": "NX-AI/TiRex-2-gifteval-zs", "revision": null,
+      "local_checkpoint_subdir": "TiRex-2-gifteval-zs", "parameters_m": {"total": 82.5, "active": 38.4},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": 928, "mechanism": "masked_future_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "tirex2"
+    },
+    {
+      "id": "Falcon-X", "result_directory": "Falcon-X", "checkpoint": "ant-intl/Falcon-X", "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 591.0, "active": 591.0},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "output": {"native_block": 480, "mechanism": "remote_direct"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Toto-2.0-2.5B", "result_directory": "Toto-2.0-2.5B", "checkpoint": "Datadog/Toto-2.0-2.5B", "revision": "51a2812",
+      "local_checkpoint_subdir": "Toto-2.0-2.5B", "parameters_m": {"total": 2454.281792, "active": 2454.281792},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto2"
+    },
+    {
+      "id": "Toto-2.0-1B", "result_directory": "Toto-2.0-1B", "checkpoint": "Datadog/Toto-2.0-1B", "revision": "1604e1a",
+      "local_checkpoint_subdir": "Toto-2.0-1B", "parameters_m": {"total": 1041.033024, "active": 1041.033024},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto2"
+    },
+    {
+      "id": "Toto-2.0-313m", "result_directory": "Toto-2.0-313m", "checkpoint": "Datadog/Toto-2.0-313m", "revision": "a7bab28",
+      "local_checkpoint_subdir": "Toto-2.0-313m", "parameters_m": {"total": 312.684608, "active": 312.684608},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto2"
+    },
+    {
+      "id": "Toto-2.0-22m", "result_directory": "Toto-2.0-22m", "checkpoint": "Datadog/Toto-2.0-22m", "revision": "685e4ae",
+      "local_checkpoint_subdir": "Toto-2.0-22m", "parameters_m": {"total": 21.915584, "active": 21.915584},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto2"
+    },
+    {
+      "id": "Toto-2.0-4m", "result_directory": "Toto-2.0-4m", "checkpoint": "Datadog/Toto-2.0-4m", "revision": "8306a98",
+      "local_checkpoint_subdir": "Toto-2.0-4m", "parameters_m": {"total": 4.144448, "active": 4.144448},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto2"
+    },
+    {
+      "id": "Timer-s1", "result_directory": "Timer-s1", "checkpoint": "bytedance-research/Timer-S1", "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 8300.0, "active": 750.0},
+      "context": {"recommended": 11520, "maximum": 12800, "gift": 11520},
+      "output": {"native_block": 16, "mechanism": "autoregressive_patch_kv_growth"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "chronos-2", "result_directory": "chronos-2", "checkpoint": "amazon/chronos-2", "revision": "29ec376",
+      "local_checkpoint_subdir": "chronos-2", "parameters_m": {"total": 119.477664, "active": 119.477664},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "notebook_inference": {"batch_size": 100},
+      "output": {"native_block": 1024, "mechanism": "direct_quantiles"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "chronos2"
+    },
+    {
+      "id": "chronos-2-small", "result_directory": "chronos-2-small", "checkpoint": "autogluon/chronos-2-small", "revision": "ddec013",
+      "local_checkpoint_subdir": "chronos-2-small", "parameters_m": {"total": 27.934624, "active": 27.934624},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "notebook_inference": {"batch_size": 100},
+      "output": {"native_block": 1024, "mechanism": "direct_quantiles"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "chronos2"
+    },
+    {
+      "id": "chronos-2-synth", "result_directory": "chronos-2-synth", "checkpoint": "autogluon/chronos-2-synth", "revision": "3607918",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 118.985888, "active": 118.985888},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "output": {"native_block": 1024, "mechanism": "direct_quantiles"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "PatchTST-FM-r1", "result_directory": "PatchTST-FM-r1", "checkpoint": "ibm-research/patchtst-fm-r1", "revision": "67dc5f9",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 257.895552, "active": 257.895552},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Granite-PatchTST-FM-r1", "result_directory": "Granite-PatchTST-FM-r1", "checkpoint": "ibm-granite/granite-timeseries-patchtst-fm-r1", "revision": "151f9c6",
+      "local_checkpoint_subdir": "granite-timeseries-patchtst-fm-r1", "parameters_m": {"total": 257.895552, "active": 257.895552},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "notebook_inference": {"batch_size": 2048},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "patchtstfm"
+    },
+    {
+      "id": "TimesFM-2.5", "result_directory": "TimesFM-2.5", "checkpoint": "google/timesfm-2.5-200m-pytorch", "revision": "1d95242",
+      "local_checkpoint_subdir": "timesfm-2.5-200m-pytorch", "parameters_m": {"total": 231.28928, "active": 200.0},
+      "context": {"recommended": 15360, "maximum": 15360, "gift": 15360},
+      "notebook_inference": {"batch_size": 1024, "per_core_batch_size": 128, "context_max": 15360},
+      "output": {"native_block": 128, "mechanism": "fixed_1024_median_feedback_sign_flip"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "timesfm25"
+    },
+    {
+      "id": "TiRex", "result_directory": "TiRex", "checkpoint": "NX-AI/TiRex-1.1-gifteval", "revision": "01b1ebc",
+      "local_checkpoint_subdir": "TiRex-1.1-gifteval", "parameters_m": {"total": 35.0, "active": 35.0},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 32, "mechanism": "masked_nan_slots_frequency_resampled"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "tirex1"
+    },
+    {
+      "id": "t0-alpha", "result_directory": "t0-alpha", "checkpoint": "theforecastingcompany/t0-alpha", "revision": "f8727c2",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 101.641541, "active": 101.641541},
+      "context": {"recommended": 8192, "maximum": null, "gift": 8192},
+      "output": {"native_block": 1024, "mechanism": "direct_then_autoregressive"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "FlowState-9.1M", "result_directory": "FlowState-9.1M", "checkpoint": "ibm-research/flowstate", "revision": "ec815e4",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 9.069312, "active": 9.069312},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": null, "mechanism": "continuous_decoder"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "FlowState-r1.1", "result_directory": "FlowState-r1.1", "checkpoint": "ibm-research/flowstate", "revision": "r1.1",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 9.069312, "active": 9.069312},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "output": {"native_block": null, "mechanism": "continuous_decoder"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "C",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Granite-FlowState-r1.1", "result_directory": "Granite-FlowState-r1.1", "checkpoint": "ibm-granite/granite-timeseries-flowstate-r1", "revision": "r1.1",
+      "local_checkpoint_subdir": "granite-timeseries-flowstate-r1.1", "parameters_m": {"total": 18.524928, "active": 18.524928},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size": 16},
+      "output": {"native_block": null, "mechanism": "continuous_decoder"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "C",
+      "include_in_scaling": true, "adapter": "flowstate"
+    },
+    {
+      "id": "Moirai2", "result_directory": "Moirai2", "checkpoint": "Salesforce/moirai-2.0-R-small", "revision": "30f43ff",
+      "local_checkpoint_subdir": "moirai-2.0-R-small", "parameters_m": {"total": 11.387208, "active": 11.387208},
+      "context": {"recommended": 4000, "maximum": 8192, "gift": 4000},
+      "notebook_inference": {"batch_size": 512},
+      "output": {"native_block": 64, "mechanism": "quantile_path_future_slot_feedback"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "moirai2"
+    },
+    {
+      "id": "Toto_Open_Base_1.0", "result_directory": "Toto_Open_Base_1.0", "checkpoint": "Datadog/Toto-Open-Base-1.0", "revision": "0411ceb",
+      "local_checkpoint_subdir": "Toto-Open-Base-1.0", "parameters_m": {"total": 151.30608, "active": 151.30608},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "notebook_inference": {"batch_size_policy": "toto_vram_estimate", "batch_size_cap": 16, "num_samples": 256, "seed": 42, "deterministic_algorithms": true, "float32_matmul_precision": "high", "context_policy": "dataset_max_without_padding"},
+      "output": {"native_block": 64, "mechanism": "stateful_rollout"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "toto1"
+    },
+    {
+      "id": "Kairos_10m", "result_directory": "Kairos_10m", "checkpoint": "mldi-lab/Kairos_10m", "revision": "786ecaf",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 9.945477, "active": 9.945477},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 64, "mechanism": "generation"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Kairos_23m", "result_directory": "Kairos_23m", "checkpoint": "mldi-lab/Kairos_23m", "revision": "5123edc",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 23.000965, "active": 23.000965},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 64, "mechanism": "generation"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Kairos_50m", "result_directory": "Kairos_50m", "checkpoint": "mldi-lab/Kairos_50m", "revision": "b788434",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 50.128965, "active": 50.128965},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 64, "mechanism": "generation"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "sundial_base_128m", "result_directory": "sundial_base_128m", "checkpoint": "thuml/sundial-base-128m", "revision": "3212e42",
+      "local_checkpoint_subdir": "sundial-base-128m", "parameters_m": {"total": 128.32968, "active": 128.32968},
+      "context": {"recommended": 2880, "maximum": 2880, "gift": 2880},
+      "output": {"native_block": 720, "mechanism": "sample_median_feedback"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 100, "seed": 1, "context_max": 2880},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "sundial"
+    },
+    {
+      "id": "tabpfn_ts", "result_directory": "tabpfn_ts", "checkpoint": "tabpfn-time-series", "revision": "v1.0.0",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 11.0, "active": 11.0},
+      "context": {"recommended": 4096, "maximum": null, "gift": 4096},
+      "output": {"native_block": null, "mechanism": "tabular_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "C",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "CleanTS-65M", "result_directory": "CleanTS-65M", "checkpoint": "EINK/CleanTS-65M", "revision": "1df5937",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 65.39232, "active": 65.39232},
+      "context": {"recommended": 3000, "maximum": 16384, "gift": 3000},
+      "output": {"native_block": null, "mechanism": "direct_full_horizon"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "YingLong_6m", "result_directory": "YingLong_6m", "checkpoint": "qcw2333/YingLong_6m", "revision": "0c658ac",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 7.319566, "active": 7.319566},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "output": {"native_block": 4096, "mechanism": "masked_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "YingLong_50m", "result_directory": "YingLong_50m", "checkpoint": "qcw2333/YingLong_50m", "revision": "5ee503f",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 36.264718, "active": 36.264718},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "output": {"native_block": 4096, "mechanism": "masked_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "YingLong_110m", "result_directory": "YingLong_110m", "checkpoint": "qcw2333/YingLong_110m", "revision": "e3738d6",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 120.466958, "active": 120.466958},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "output": {"native_block": 4096, "mechanism": "masked_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "YingLong_300m", "result_directory": "YingLong_300m", "checkpoint": "qcw2333/YingLong_300m", "revision": "c57b37f",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 310.06747, "active": 310.06747},
+      "context": {"recommended": 4096, "maximum": 4096, "gift": 4096},
+      "output": {"native_block": 4096, "mechanism": "masked_direct"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Reverso-Small", "result_directory": "Reverso-Small", "checkpoint": "shinfxh/reverso/checkpoints/reverso_small", "revision": "a0eaa2d",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 0.55, "active": 0.55},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 48, "mechanism": "append_crop"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "goia-forecast-nano-v0", "result_directory": "goia-forecast-nano-v0", "checkpoint": "gredio/goia-forecast-nano-v0", "revision": "a3d17d8",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 4.728051, "active": 4.728051},
+      "context": {"recommended": 2048, "maximum": 4096, "gift": 2048},
+      "output": {"native_block": 1024, "mechanism": "median_feedback"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "PatchFM", "result_directory": "PatchFM", "checkpoint": "vilhess/PatchFM", "revision": "2c0b055",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 345.236128, "active": 345.236128},
+      "context": {"recommended": 1024, "maximum": 1024, "gift": 1024},
+      "output": {"native_block": 32, "mechanism": "quantile_path_feedback"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Moirai_base", "result_directory": "Moirai_base", "checkpoint": "Salesforce/moirai-1.1-R-base", "revision": "a035878",
+      "local_checkpoint_subdir": "moirai-1.1-R-base", "parameters_m": {"total": 91.357728, "active": 91.357728},
+      "context": {"recommended": 4000, "maximum": 15360, "gift": 4000},
+      "notebook_inference": {"batch_size": 512, "num_samples": 100, "patch_size": 32},
+      "output": {"native_block": null, "mechanism": "joint_masked_direct"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "moirai"
+    },
+    {
+      "id": "Moirai_large", "result_directory": "Moirai_large", "checkpoint": "Salesforce/moirai-1.1-R-large", "revision": "d144331",
+      "local_checkpoint_subdir": "moirai-1.1-R-large", "parameters_m": {"total": 310.970624, "active": 310.970624},
+      "context": {"recommended": 4000, "maximum": 15360, "gift": 4000},
+      "notebook_inference": {"batch_size": 512, "num_samples": 100, "patch_size": 32},
+      "output": {"native_block": null, "mechanism": "joint_masked_direct"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "include_in_scaling": true, "adapter": "moirai"
+    },
+    {
+      "id": "litespecformer", "result_directory": "litespecformer", "checkpoint": "FlowVortex/LiteSpecFormer-1.0-36M", "revision": "5baa0f6",
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 36.670304, "active": 36.670304},
+      "context": {"recommended": 768, "maximum": 768, "gift": 768},
+      "output": {"native_block": 16, "mechanism": "quantile_path_feedback"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "B",
+      "include_in_scaling": true, "adapter": null
+    },
+    {
+      "id": "Super-Linear", "result_directory": "Super-Linear", "checkpoint": null, "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 2.5, "active": null},
+      "context": {"recommended": 512, "maximum": null, "gift": 512},
+      "output": {"native_block": null, "mechanism": "direct_unknown"},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    },
+    {
+      "id": "timesfm_2_0_500m", "result_directory": "timesfm_2_0_500m", "checkpoint": "google/timesfm-2.0-500m-pytorch", "revision": null,
+      "local_checkpoint_subdir": "timesfm-2.0-500m-pytorch", "parameters_m": {"total": 500.0, "active": 500.0},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 128, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "per_core_batch_size": 32},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "timesfm2"
+    },
+    {
+      "id": "chronos_bolt_base", "result_directory": "chronos_bolt_base", "checkpoint": "amazon/chronos-bolt-base", "revision": null,
+      "local_checkpoint_subdir": "chronos-bolt-base", "parameters_m": {"total": 205.292928, "active": 205.292928},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 64, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 20},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "chronos"
+    },
+    {
+      "id": "chronos_bolt_small", "result_directory": "chronos_bolt_small", "checkpoint": "amazon/chronos-bolt-small", "revision": null,
+      "local_checkpoint_subdir": "chronos-bolt-small", "parameters_m": {"total": 47.718016, "active": 47.718016},
+      "context": {"recommended": 2048, "maximum": 2048, "gift": 2048},
+      "output": {"native_block": 64, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 20},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "chronos"
+    },
+    {
+      "id": "chronos_large", "result_directory": "chronos_large", "checkpoint": "amazon/chronos-t5-large", "revision": null,
+      "local_checkpoint_subdir": "chronos-t5-large", "parameters_m": {"total": 708.963328, "active": 708.963328},
+      "context": {"recommended": 512, "maximum": 512, "gift": 512},
+      "output": {"native_block": 64, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 20},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "chronos"
+    },
+    {
+      "id": "chronos_base", "result_directory": "chronos_base", "checkpoint": "amazon/chronos-t5-base", "revision": null,
+      "local_checkpoint_subdir": "chronos-t5-base", "parameters_m": {"total": 201.374976, "active": 201.374976},
+      "context": {"recommended": 512, "maximum": 512, "gift": 512},
+      "output": {"native_block": 64, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 20},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "chronos"
+    },
+    {
+      "id": "Chronos_small", "result_directory": "Chronos_small", "checkpoint": "amazon/chronos-t5-small", "revision": null,
+      "local_checkpoint_subdir": "chronos-t5-small", "parameters_m": {"total": 46.15424, "active": 46.15424},
+      "context": {"recommended": 512, "maximum": 512, "gift": 512},
+      "output": {"native_block": 64, "mechanism": "append_crop"},
+      "notebook_inference": {"batch_size": 1024, "num_samples": 20},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "A",
+      "include_in_scaling": false, "adapter": "chronos"
+    },
+    {
+      "id": "TTM-R1-Pretrained", "result_directory": "TTM-R1-Pretrained", "checkpoint": null, "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 0.805, "active": null},
+      "context": {"recommended": null, "maximum": null, "gift": null},
+      "output": {"native_block": null, "mechanism": "task_dependent_recursive"},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    },
+    {
+      "id": "TTM-R2-Pretrained", "result_directory": "TTM-R2-Pretrained", "checkpoint": null, "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 0.805, "active": null},
+      "context": {"recommended": null, "maximum": null, "gift": null},
+      "output": {"native_block": null, "mechanism": "task_dependent_recursive"},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    },
+    {
+      "id": "TTM-R3-PT", "result_directory": "TTM-R3-PT", "checkpoint": null, "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 1.41, "active": null},
+      "context": {"recommended": null, "maximum": null, "gift": null},
+      "output": {"native_block": null, "mechanism": "dynamic_expert_recursive"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    },
+    {
+      "id": "recursive-moirai-2", "result_directory": "recursive-moirai-2", "checkpoint": "Salesforce/moirai-2.0-R-small", "revision": null,
+      "local_checkpoint_subdir": "moirai-2.0-R-small", "parameters_m": {"total": 9.2087, "active": 9.2087},
+      "context": {"recommended": 8192, "maximum": 8192, "gift": 8192},
+      "output": {"native_block": 64, "mechanism": "latent_state_recursion"},
+      "joint_multivariate": false, "testdata_leakage": false, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    },
+    {
+      "id": "moirai_small", "result_directory": "moirai_small", "checkpoint": "Salesforce/moirai-1.0-R-small", "revision": null,
+      "local_checkpoint_subdir": "moirai-1.0-R-small", "parameters_m": {"total": 13.827528, "active": 13.827528},
+      "context": {"recommended": 4000, "maximum": 15360, "gift": 4000},
+      "output": {"native_block": null, "mechanism": "joint_masked_direct"},
+      "joint_multivariate": true, "testdata_leakage": false, "verification_grade": "A",
+      "notebook_inference": {"batch_size": 512, "num_samples": 100, "patch_size": 32},
+      "include_in_scaling": false, "adapter": "moirai"
+    },
+    {
+      "id": "timesfm", "result_directory": "timesfm", "checkpoint": "google/timesfm-1.0-200m-pytorch", "revision": null,
+      "local_checkpoint_subdir": "timesfm-1.0-200m-pytorch", "parameters_m": {"total": 200.0, "active": 200.0},
+      "context": {"recommended": 512, "maximum": 512, "gift": 512},
+      "output": {"native_block": 128, "mechanism": "append_crop"},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "C",
+      "notebook_inference": {"batch_size": 1024, "per_core_batch_size": 32},
+      "include_in_scaling": false, "adapter": "timesfm1"
+    },
+    {
+      "id": "Zeus", "result_directory": "Zeus", "checkpoint": null, "revision": null,
+      "local_checkpoint_subdir": null, "parameters_m": {"total": 102.0, "active": 102.0},
+      "context": {"recommended": null, "maximum": null, "gift": null},
+      "output": {"native_block": null, "mechanism": "label_selected_context"},
+      "joint_multivariate": false, "testdata_leakage": true, "verification_grade": "C",
+      "include_in_scaling": false, "adapter": null
+    }
+  ]
+}

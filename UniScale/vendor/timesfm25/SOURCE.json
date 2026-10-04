@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/google-research/timesfm",
+  "revision": "d2cb4849b6150e331ad7a4e03448bc014ab88973",
+  "license": "Apache-2.0",
+  "scope": "PyTorch inference implementation.",
+  "changes": "Repository-local namespace, Torch-only exports; unused covariate API removed; reserved window_size field documented explicitly. Original base file had only a two-line covariate docstring correction relative to the cited revision."
+}

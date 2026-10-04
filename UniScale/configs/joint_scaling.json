@@ -1,0 +1,38 @@
+{
+  "experiment_name": "joint-scaling",
+  "models_file": "formal_models.json",
+  "datasets_file": "controlled_dataset_panel.json",
+  "dataset_terms": [
+    "short"
+  ],
+  "H": [
+    48,
+    96,
+    192,
+    336,
+    720
+  ],
+  "L": [
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    6144,
+    8192
+  ],
+  "origin_horizon": 720,
+  "execution": {
+    "device": "cuda"
+  },
+  "scheduler": {
+    "gpus": [
+      0
+    ],
+    "max_workers_per_gpu": 1,
+    "oom_concurrency": [
+      1
+    ]
+  }
+}

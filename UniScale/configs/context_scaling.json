@@ -1,0 +1,30 @@
+{
+  "experiment_name": "context-scaling",
+  "models_file": "formal_models.json",
+  "datasets_file": "controlled_dataset_panel.json",
+  "grid_reuse": {
+    "experiment_name": "joint-scaling"
+  },
+  "L": [
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    6144,
+    8192
+  ],
+  "execution": {
+    "device": "cuda"
+  },
+  "scheduler": {
+    "gpus": [
+      0
+    ],
+    "max_workers_per_gpu": 1,
+    "oom_concurrency": [
+      1
+    ]
+  }
+}

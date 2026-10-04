@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UniScale model catalogue",
+  "type": "object",
+  "required": ["schema_version", "metrics", "models"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "metrics": {
+      "type": "object",
+      "required": ["mase_column", "crps_column", "baseline_result_directory"]
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "result_directory", "parameters_m", "context", "output",
+          "joint_multivariate", "testdata_leakage", "include_in_scaling"
+        ]
+      }
+    }
+  }
+}
